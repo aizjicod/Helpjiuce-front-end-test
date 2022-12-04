@@ -1,4 +1,5 @@
 import Main from "./components/main";
+import TextEditor from "./components/text-editor";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header container-flex">
         <Main />
       </header>
+      <TextEditor />
     </div>
   );
 }

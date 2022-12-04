@@ -8,7 +8,11 @@
 /* app */
 .App {
   width: 50%;
+  gap: 65px;
+  justify-content: start;
 }
+
+/* header styles */
 
 .App-header {
   gap: 20px;
@@ -19,4 +23,32 @@
   width: 100%;
   padding-bottom: 18px;
   border-bottom: 1px solid #00000030;
+}
+
+/* text editor */
+#text-editor{
+  width: 100%;
+  gap: 18px;
+  font-size: 16px;
+}
+
+#text {
+  width: 100%;
+  gap: 8px;
+}
+
+#text > p {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+#input-editor {
+  padding-top: 8px;
+  font-size: 16px;
+  word-wrap: break-word;
+  height: auto;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
 }

@@ -1,0 +1,22 @@
+/* *this class is used to not repeat the same code */
+.container-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* app */
+.App {
+  width: 50%;
+}
+
+.App-header {
+  gap: 20px;
+  justify-content: start;
+}
+
+#title-h1 {
+  width: 100%;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #00000030;
+}

@@ -32,9 +32,10 @@ const TextEditor = () => {
   };
 
   const handleOnChange = (e) => {
+    const input = document.getElementById('input-editor');
     const { target } = e;
     if (target.value[0] === '/') {
-      addBlock.classList.add('active');
+      document.getElementById('add-block').classList.add('active');
       if (target.value[1] === '1') {
         setoptions(1);
         input.placeholder = 'Heading 1';
@@ -47,7 +48,7 @@ const TextEditor = () => {
   // this useEffect will be on charge of reseting the input value
   // in order to not cause any other side effect
   useEffect(() => {
-    input.value = ''.trim();
+    document.getElementById('input-editor').value = ''.trim();
   });
 
   return (

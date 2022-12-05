@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the right h1 component 1`] = `
+<h1
+  class="heading1"
+>
+  this is a h1
+</h1>
+`;
+
+exports[`renders the right p component 1`] = `
+<p>
+  this is a p
+</p>
+`;

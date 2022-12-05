@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Helpjuice Front-end test
 
 This project is a Front-end test recieved by Helpjuice.
 It consist in a Notion-like editor, but only the H1 heading component is implemented. So the user can only write normal paragraphs and have the ability to convert them in a H1.

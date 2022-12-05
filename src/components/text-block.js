@@ -1,6 +1,6 @@
-const Heading = ({heading, text, index}) => {
+const TextBlock = ({option, text, index}) => {
 let content;
-switch (heading) {
+switch (option) {
   case 1:
     content = <h1 key={index} className="heading1">{text}</h1>
     break;
@@ -12,4 +12,4 @@ switch (heading) {
 return (content)
 }
 
-export default Heading
+export default TextBlock

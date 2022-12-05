@@ -1,30 +1,25 @@
 import { useEffect, useState } from "react"
 import AddBlock from "./add-block"
-import Heading from "./headinds"
+import TextBlock from "./text-block"
 
 const TextEditor = () => {
-  // states: para, list of paragraphs, headings, dictate which heading the user wants to write in
+  // states: para, list of paragraphs, options, dictate which text block the user wants to write in
   const [para, setPara] = useState([])
-  const [headings, setheadings] = useState(0)
+  const [options, setoptions] = useState(0)
 
   // functions
   const resetInput = (input) => {
     input.className = ''
     input.placeholder = 'Type / for blocks, @ to link docs or people'
-    document.getElementById('add-block').classList.toggle('active');
+    document.getElementById('add-block').classList.remove('active');
   }
 
   const handleOnKeyPress = (e) => {
     if (e.code === 'Enter') {
       e.preventDefault()
-      if (headings !== 0) {
-        setPara(prev => [...prev, [e.target.value, headings]])
-        setheadings(0)
-        resetInput(e.target)
-        return
-      }
-      setPara(prev => [...prev, e.target.value])
-      setheadings(0)
+      setPara(prev => [...prev, [e.target.value, options]])
+      setoptions(0)
+      resetInput(e.target)
       return
     }
     if (e.code === 'Escape') {
@@ -39,7 +34,7 @@ const TextEditor = () => {
     if (target.value[0] === '/') {
       document.getElementById('add-block').classList.add('active');
       if (target.value[1] === '1') {
-        setheadings(1)
+        setoptions(1)
         input.placeholder = 'Heading 1';
         input.classList.add("header1");
         input.value = '';
@@ -53,17 +48,11 @@ const TextEditor = () => {
     document.getElementById('input-editor').value = ''.trim();
   }, [para])
 
-  // input whill change depending ont the type of text or heading the users wants
-
   return (
     <div id="text-editor" className="container-flex">
       <div id="text" className="container-flex">
-        {para.map((text, index) => {
-          if (text[1] !== 0 && typeof text[1] === 'number') {
-            return <Heading heading={text[1]} text={text[0]} index={index} />
-          }
-          return (<p key={index}>{text}</p>)
-        })
+        {para.map((text, index) => <TextBlock option={text[1]} text={text[0]} index={index} />
+        )
         }
       </div>
       <textarea type="text" id="input-editor" placeholder="Type / for blocks, @ to link docs or people" onKeyDown={handleOnKeyPress} onChange={handleOnChange} />

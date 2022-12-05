@@ -34,6 +34,8 @@ const TextEditor = () => {
   const handleOnChange = (e) => {
     const input = document.getElementById('input-editor');
     const { target } = e;
+    // as soon as user types '/' a popup will appear
+    // the second value will dictate the block of text to be added
     if (target.value[0] === '/') {
       document.getElementById('add-block').classList.add('active');
       if (target.value[1] === '1') {

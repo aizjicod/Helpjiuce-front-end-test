@@ -38,7 +38,7 @@ const TextEditor = () => {
     // the second value will dictate the block of text to be added
     if (target.value[0] === '/') {
       document.getElementById('add-block').classList.add('active');
-      if (target.value[1] === '1') {
+      if (target.value.slice(1) === '1') {
         setoptions(1);
         input.placeholder = 'Heading 1';
         input.classList.add('header1');

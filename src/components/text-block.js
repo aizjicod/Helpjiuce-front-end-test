@@ -1,15 +1,15 @@
-const TextBlock = ({option, text, index}) => {
-let content;
-switch (option) {
-  case 1:
-    content = <h1 key={index} className="heading1">{text}</h1>
-    break;
-  default:
-    content = (<p key={index}>{text}</p>)
-    break;
-}
+const TextBlock = ({ option, text, index }) => {
+  let content;
+  switch (option) {
+    case 1:
+      content = <h1 key={index} className="heading1">{text}</h1>;
+      break;
+    default:
+      content = (<p key={index}>{text}</p>);
+      break;
+  }
 
-return (content)
-}
+  return (content);
+};
 
-export default TextBlock
+export default TextBlock;

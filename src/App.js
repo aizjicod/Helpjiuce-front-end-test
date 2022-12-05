@@ -1,5 +1,5 @@
-import Main from "./components/main";
-import TextEditor from "./components/text-editor";
+import Main from './components/main';
+import TextEditor from './components/text-editor';
 
 function App() {
   return (
